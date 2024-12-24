@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color:#fff;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+:root {
+    --primary-color: #6c00f8;
+    --secondary-color: #f8f8f8;
+    --background-color: #0f0f0f;
+    --border-color: #6c00f8;
+    --text-color: #fff;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+span {
+    background: linear-gradient(90deg, #6c00f8, #bc89fd);
+    -webkit-background-clip: text; 
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
+/* Navbar */
+
+header{
+    backdrop-filter: blur(10px);
+    background-color: #0f0f0fda;
+}
+body {
+    background-color: #0f0f0f;
+    margin-top: 100px;
+}
+
+.header {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+
+.gradiente {
+    background: linear-gradient(90deg, #6c00f8, #bc89fd);
+    -webkit-background-clip: text; 
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    
+}
+
+.menu h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu h1:hover {
+    transform: scale(1.1);
+}
+
+ul li {
+    display: inline;
+    list-style: none;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    position: relative; /* Necessário para posicionar a linha */
+    padding: 0.3rem 0; /* Para evitar saltos */
+    transition: color 0.3s; /* Transição suave para a cor */
+}
+
+
+
+.menu {
+    display: flex;;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    padding: 2.5rem 0;
+}
+
+/* Efeito hover para todos os links */
+.menu ul li a:hover {
+    color: #6c00f8; /* Cor do texto no hover */
+}
+
+.menu ul li a::after {
+    content: ''; /* Cria a linha */
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Fica logo abaixo do texto */
+    width: 0;
+    height: 2px;
+    background-color: #6c00f8; /* Cor da linha */
+    transition: width 0.3s; /* Efeito de animação */
+}
+
+.menu ul li a:hover::after {
+    width: 100%; /* Linha se estende na largura do texto */
+}
+
+/* Destaque para o link "Home" */
+.menu ul li:first-child a {
+    font-weight: bold; /* Texto mais destacado */
+    color: #6c00f8; /* Cor padrão destacada */
+}
+
+.menu ul li:first-child a::after {
+    width: 100%; /* Linha visível por padrão */
+}
+
+.gradiente-butn {
+    background: #6c00f8; /* Gradiente de fundo */
+    color: #fff; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    border-radius: 20px; /* Bordas arredondadas */
+    padding: 0.8rem 2rem; /* Espaçamento interno */
+    font-size: 1rem; /* Tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    cursor: pointer; /* Mostra o cursor de ponteiro no hover */
+    transition: all 0.3s ease-in-out; /* Animação suave */
+}
+
+.gradiente-butn:hover {
+    transform: scale(1.1);
+}
+.fas{
+    display: none;
+}
+/*final navbar*/
+
+/*foto perfil*/
+.foto{
+    width: 60vh;
+    height: 60vh;
+    border-radius: 50%;
+    margin-right: 10rem;
+}
+.foto img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 25px #6c00f8;
+    transition: 0.4s ease-in-out;
+}
+
+.foto img:hover{
+    box-shadow: 0 0 25px #6c00f8,
+                0 0 50px #6c00f8,
+                0 0 90px #6c00f8;
+}
+/*final foto perfil*/
+
+/*home*/
+.home {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    padding: 3rem 0;
+}
+.home-content {
+    text-align: end;
+    margin-right: 4rem;
+    width: 40%;
+}
+.home-content h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+.home-content span {
+    background: linear-gradient(90deg, #6c00f8, #bc89fd);
+    -webkit-background-clip: text; 
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+.home-content h3 {
+    font-size: 1.8rem;
+}
+.home-content p {
+    font-size: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: .5rem 0;
+}
+
+.home-content .social{
+    padding: .5rem 0;
+}
+.home-content .social a {
+    padding: 0 1rem;
+}
+.home-content .social a i {
+    font-size: 1.5rem;
+    color: #6c00f8;
+    transition: 0.4s ease-in-out;
+}
+.home-content .social a i:hover {
+    color: #bc89fd;
+}
+/*final home*/
+
+/*sobre*/
+.sobre {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Permite que os elementos se ajustem em telas menores */
+    justify-content: center; /* Centraliza os itens se houver espaço extra */
+    align-items: center;
+    gap: 2rem; /* Espaçamento entre imagem e texto */
+    background-color: #131313;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.img {
+    width: 30%; /* Ajustado para responsividade */
+    max-width: 300px; /* Limite máximo para telas maiores */
+    aspect-ratio: 1; /* Mantém proporção de 1:1 */
+    border-radius: 50%;
+    overflow: hidden; /* Garante que a imagem não ultrapasse o contêiner */
+    box-shadow: 0 0 25px #6c00f8;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease-in-out;
+}
+
+.sobre-content {
+    width: 60%; /* Ajustado para responsividade */
+    max-width: 600px; /* Limite máximo para telas maiores */
+}
+
+.sobre-content h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fff; /* Adicione contraste com o fundo */
+}
+
+.sobre-content p {
+    font-size: 1rem;
+    color: #ccc; /* Texto mais legível no fundo escuro */
+    line-height: 1.5;
+}
+
+.img, .sobre-content {
+    margin: 5rem 0;
+}
+/*final sobre*/
+
+/*serviços*/
+
+.heading {
+    text-align: center;
+    margin: 5rem 0;
+    font-size: 3.5rem;
+}
+
+.services {
+    background-color: #0f0f0f;
+    color: #fff;
+}
+
+.services h2 {
+    color: #fff;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
+    gap: 2.5rem;
+    margin: 5rem;
+}
+
+.service-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6c00f8;
+    height: 500px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 5px solid transparent;
+    transition: 0.4s ease-in-out;
+}
+
+.service-box:hover {
+    border: 5px solid #bc89fd;
+    background-color: #0f0f0f;
+    border: 5px solid #bc89fd;
+    transform: scale(1.03);
+    box-shadow: 0 0 25px #bc89fd;
+}
+
+.service-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5rem;
+}
+
+.service-info h4 {
+    font-size: 2rem;
+    margin: 2rem 0;
+    font-weight: 800;
+}
+
+.service-info p {
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.7;
+}
+
+.service-box i {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+/*fim serviços*/
+
+/*portifolio*/
+.projects {
+    background-color: #131313;
+}
+
+.projects-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    row-gap: 5rem;
+    place-items: center;
+    margin: 5rem;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #0f0f0f;
+    border: 2px solid #6c00f8;
+    border-radius: 3rem;
+    gap: 2rem;
+    padding: 5rem 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 5px #6c00f8;
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    box-shadow: 0 0 25px #bc89fd,
+                0 0 50px #bc89fd,
+                0 0 90px #bc89fd;
+    transform: scale(1.02);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 2rem;
+    transition: 0.3s ease;
+}
+
+.project-card img {
+    max-width: 300px;
+    border-radius: 2rem;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    font-size: 2rem;
+}
+
+.project-card p {
+    font-size: 1.2rem;
+}
+/*Fim Portfolio*/
+
+/*Contato*/
+.contact {
+    background-color: #0f0f0f;
+}
+
+.form {
+    margin: 8rem;
+    
+}
+.contact h2 {
+    margin-bottom: 3rem;
+    color: #fff;
+}
+
+.contact form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 5rem 0;
+    text-align: center;
+}
+
+.contact form, .input-box input, .contact form textarea {
+    width: 100%;
+    padding: 1.2rem;
+    background-color: #0f0f0f;
+    border: 2px solid #6c00f8;
+    color: #fff;
+    font-size: .7rem;
+    border-radius: 2rem;
+    margin: 1.2rem 0;
+    resize: none;
+}
+/*Fim Contato*/
+
+/*Footer*/
+.footer {
+    background-color: #131313;
+    padding: 50px 0;
+}
+
+.footer .social {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.footer .social a {
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+    transition: 0.4s ease-in-out;
+}
+.footer ul {
+    text-align: center;
+    font-size: 1rem;
+}
+
+.footer ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.footer ul li a {
+    color: #fff;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease-in-out;
+}
+
+.footer ul li a:hover {
+    border-bottom: 3px solid #6c00f8;
+}
+
+.footer .copyright {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 16px;
+}
+/* Menu responsivo */
+@media (max-width: 1285px) {
+
+    html {
+        overflow-x: hidden;
+        overflow: hidden;
+    }
+    .fas {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* Estilo do menu quando a tela for pequena */
+    .menu-list {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 60%;
+        padding: 1rem 3rem;
+        background-color: #141414b7;
+        border-bottom-left-radius: 2rem;
+        border-left: 2px solid #6c00f8;
+        border-bottom: 2px solid #6c00f8;
+        display: none; /* Inicialmente oculto */
+        flex-direction: column; /* Para que os links fiquem empilhados */
+        align-items: center; /* Alinha os links à esquerda */
+        transition: all 0.5s ease-in-out; /* Animação suave ao abrir */
+    }
+
+    .menu-list.active {
+        display: flex; 
+        transform: translateX(0);
+    }
+
+    .menu-list a {
+        display: block;
+        margin: 3rem 0;
+        color: #fff;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .gradiente-butn {
+        display: none; /* Oculta o botão de contato */
+    }
+
+    .home {
+        flex-direction: column-reverse; /* Ajusta a direção dos elementos */
+        margin: 5rem 0;
+        gap: 5rem;
+    }
+
+    .home-content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .foto img {
+        width: 56vh;
+    }
+
+    .sobre {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .sobre h2 {
+        text-align: center;
+        margin: 2rem 0;
+    }
+
+    .sobre img {
+        width: 52vh;
+    }
+
+    .contact form {
+        flex-direction: column;
+    }   
+
+    .contact form, .input-box input, .contact form textarea {
+        width: 100%;
+    }
+}
