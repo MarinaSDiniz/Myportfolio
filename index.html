@@ -141,21 +141,20 @@
     <section class="contact" id="contato">
         <h2 class="heading">Entre em <span>contato</span></h2>
 
-        <form action="#" class="form">
+        <form action="https://formsubmit.co/marinasilvadiniz@gmail.com" method="POST" class="form">
             <div class="input-group">
                 <div class="input-box">
                     <input type="text" placeholder="Nome" required>
                     <input type="email" placeholder="Email" required>
-                </div>
-                <div class="input-box">
-                    <input type="text" placeholder="Telefone" required>
+                    <input type="tel" placeholder="Telefone" required>
                     <input type="text" placeholder="Assunto" required>
                 </div>
             </div>
             <div class="input-group-2">
                 <textarea placeholder="Mensagem" cols="30" rows="12" required></textarea>
-                <input type="submit" value="Enviar" class="gradiente-butn">
+                <button type="submit" class="gradiente-butn">Enviar</button>
             </div>
+            <input type="hidden" name="_captcha" value="false">
         </form>
     </section>
     <!-- Fim Contato -->
