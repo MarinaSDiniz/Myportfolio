@@ -70,7 +70,6 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
-
 .gradiente {
     background: linear-gradient(90deg, #6c00f8, #bc89fd);
     -webkit-background-clip: text; 
