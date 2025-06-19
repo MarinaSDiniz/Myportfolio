@@ -89,6 +89,7 @@ body {
     transform: scale(1.1);
 }
 
+
 ul li {
     display: inline;
     list-style: none;
@@ -212,7 +213,7 @@ a {
     -webkit-text-fill-color: transparent; 
 }
 .home-content h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 .home-content p {
     font-size: 1rem;
@@ -444,26 +445,21 @@ a {
     color: #fff;
 }
 
-.contact form {
-    display: flex;
+
+
+.contact .social {
+    display: flex;                /* Adicionado */
+    gap: 2rem;                    /* Adicionado: define o espaço entre os ícones */
+    padding: 1.2rem;
+    color: #fff;
+    font-size: 1.5rem;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
-    margin: 7rem 0;
-    text-align: center;
-}
-
-.contact form, .input-box input, .contact form textarea {
-    width: 80%;
-    padding: 1.2rem;
-    background-color: #0f0f0f;
-    border: 2px solid #6c00f8;
-    color: #fff;
-    font-size: .7rem;
     border-radius: 2rem;
-    margin: 1.2rem 0;
+    margin-bottom: 1.2rem;
     resize: none;
 }
+
 /*Fim Contato*/
 
 /*Footer*/
@@ -596,7 +592,7 @@ a {
 
     .sobre img {
         width: 32vh;
-        
+        object-fit: cover;
     }
 
     .img {
